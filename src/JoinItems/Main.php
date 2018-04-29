@@ -89,7 +89,7 @@
             $this->getLogger()->info(Color::GREEN . 'Plugin enabled');
         }
         
-        public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
+        public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
             switch ($command->getName()) {
                 case $this->principalCommand:
                     if ($sender instanceof Player) {
